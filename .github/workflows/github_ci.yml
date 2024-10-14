@@ -17,4 +17,4 @@ jobs:
           docker build -t euler .
       - name: Run Docker container
         run: |
-          docker run -d --name euler
+          docker run euler
