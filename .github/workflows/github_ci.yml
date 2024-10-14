@@ -17,4 +17,4 @@ jobs:
           docker build -t asso .
       - name: Run Docker container
         run: |
-          docker run asso > answer_asso.txt
+          docker run asso
