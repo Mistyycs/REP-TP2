@@ -1,10 +1,14 @@
 import random
+import numpy as np
+from decimal import Decimal, getcontext
+# Set the decimal precision (DPS) to 50
+getcontext().prec = 50
 
 def associativity() -> bool:
     x = random.random()
     y = random.random()
     z = random.random()
-    return x + (y + z) == (x + y) + z
+    return Decimal(x) + Decimal(Decimal(y) + Decimal(z)) == Decimal(Decimal(x) + Decimal(y)) + Decimal(z)
 
 def test_associativity(number_iterations: int) -> None:
     number_not_ok = 0
@@ -16,7 +20,7 @@ def test_associativity(number_iterations: int) -> None:
 
 
 def main():
-    test_associativity(100000)
+    test_associativity(10000)
 
 if __name__ == "__main__":
     main()
