@@ -1,11 +1,12 @@
 import random
+import numpy
 
 def check_property(repetitions) -> bool:
     correct_count = 0
     for _ in range(repetitions):
-        x = random.random()
-        y = random.random()
-        z = random.random()
+        x = {{ operation_gen_alea }}
+        y = {{ operation_gen_alea }}
+        z = {{ operation_gen_alea }}
 
         # Check if the associative property holds
         result1 = {{ operation1}}
@@ -13,7 +14,7 @@ def check_property(repetitions) -> bool:
         if result1 == result2:
             correct_count += 1
         
-    print(f"Percentage of trials where associativity works : {correct_count}, number of repetitions : {repetitions}.")
+    print(f"Percentage of trials where associativity works : {round(correct_count/repetitions*100,2)}, number of repetitions : {repetitions}.")
 
 # Define the number of repetitions
 repetitions = {{ repetitions }}
