@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.ref }}
           fetch-depth: 0
           token: ${{ secrets.REPTOKEN }}
 
@@ -30,7 +30,7 @@ jobs:
       - name: Add and Commit answer.txt
         run: |
           git config --local user.email ${{ secrets.EMAIL }}
-          git config --local user.name "Arnolec"
+          git config --local user.name "arnolec"
           git add answer.txt
           git commit -m "Update answer.txt with Docker output"
 
@@ -38,5 +38,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.REPTOKEN }}
-          branch: variation # Cible la branche variation
+          branch: ${{ github.ref }} # Cible la branche variation
           force: true
