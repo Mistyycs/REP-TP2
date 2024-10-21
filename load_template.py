@@ -14,4 +14,4 @@ generated_code = template.render(factors)
 with open('generated_property_check.py','w') as f:
     f.write(generated_code)
 
-printf("Generated code has been written to 'generated_property_check.py'.")
+print("Generated code has been written to 'generated_property_check.py'.")
