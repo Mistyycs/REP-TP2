@@ -12,8 +12,9 @@ def test_associativity(number_iterations: int) -> None:
     for i in range(number_iterations):
         if not associativity():
             number_not_ok += 1
-    print(f"Number of associative operations: {number_iterations-number_not_ok} out of {number_iterations}")
-    print(f"Percentage of associative operations: {(1-number_not_ok/number_iterations)*100}%")
+    #print(f"Number of associative operations: {number_iterations-number_not_ok} out of {number_iterations}")
+    resultat = round(((1-number_not_ok/number_iterations)*100),2)
+    print(resultat)
 
 
 def main():
