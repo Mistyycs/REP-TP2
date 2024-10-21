@@ -28,14 +28,14 @@ jobs:
 
       - name: Run Docker container and save output
         run: |
-          docker run asso > answer.txt
+          docker run asso > answer_associativity.txt
 
       - name: Add and Commit answer.txt
         run: |
           git config --local user.email ${{ secrets.EMAIL }}
           git config --local user.name "arnolec"
           git add answer.txt
-          git commit -m "Update answer.txt with Docker output [skip-ci]"
+          git commit -m "Update answer_associativity.txt with Docker output [skip-ci]"
 
       - name: Push changes to the variation branch
         uses: ad-m/github-push-action@master
