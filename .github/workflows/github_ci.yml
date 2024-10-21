@@ -4,7 +4,7 @@ on:
     branches:
       - '**'
     paths-ignore:  # Ignore les modifications dans answer.txt si elles viennent de l'action
-      - 'answer.txt'
+      - 'answer_associativity.txt'
 
 jobs:
   build:
@@ -34,7 +34,7 @@ jobs:
         run: |
           git config --local user.email ${{ secrets.EMAIL }}
           git config --local user.name "arnolec"
-          git add answer.txt
+          git add answer_associativity.txt
           git commit -m "Update answer_associativity.txt with Docker output [skip-ci]"
 
       - name: Push changes to the variation branch
