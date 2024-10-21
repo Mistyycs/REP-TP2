@@ -1,6 +1,7 @@
 import random
 from decimal import Decimal, getcontext
-# Set the decimal precision (DPS) to 50
+# Set the decimal precision (DPS) to 60
+# More accurate than default precision of float python -> give 100% of associativity
 getcontext().prec = 60
 
 def associativity() -> bool:
