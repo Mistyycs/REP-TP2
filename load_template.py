@@ -1,6 +1,6 @@
 from jinja2 import Template
 
-template_content = open('property.py.jinja').read()
+template_content = open('property_template.py.jinja').read()
 template = Template(template_content)
 
 factors = {

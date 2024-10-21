@@ -8,15 +8,15 @@ def check_property(repetitions) -> bool:
         z = random.random()
 
         # Check if the associative property holds
-        result1 = {{ operation1}}
-        result2 = {{ operation2}}
+        result1 = (x+y) + z
+        result2 = x+ (y+z)
         if result1 == result2:
             correct_count += 1
         
-    print(f"Percentage of trials where associativity works : {correct_count}, number of repetitions : {repetitions}.")
+    print(f"Out of {repetitions} trials, the property held {correct_count} times.")
 
 # Define the number of repetitions
-repetitions = {{ repetitions }}
+repetitions = 1000
 
 #Call the function
 check_property(repetitions)
