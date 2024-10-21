@@ -1,5 +1,4 @@
 import random
-import numpy as np
 from decimal import Decimal, getcontext
 # Set the decimal precision (DPS) to 50
 getcontext().prec = 60
